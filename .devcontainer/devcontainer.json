@@ -1,0 +1,24 @@
+{
+    "name": "Dev Container Definition - AWS CDK",
+    //"image": "public.ecr.aws/pahudnet/vscode:latest",
+    "dockerFile": "Dockerfile",
+    //"workspaceFolder": "/workspace",
+    //"workspaceMount": "source=remote-workspace,target=/workspace,type=volume",
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=${localEnv:HOME}${localEnv:USERPROFILE}/.aws/credentials,target=/home/vscode/.aws/credentials,type=bind,consistency=cached"
+    ],
+    "containerEnv": {
+        "assumed_role_name": "demo-assume-role",
+        "MY_CONTAINER_VAR2": "${localEnv:SOME_LOCAL_VAR}"
+    },
+    "containerUser": "vscode",
+    "remoteUser": "vscode",
+    // "postCreateCommand": [
+    //     "bin/refresh_credentials.sh vscode"  // $1:vscode as your profile to assume "assumed_role_name" 
+    // ],
+    "extensions": [
+        "dbaeumer.vscode-eslint@2.1.5"
+    ]
+}
+
