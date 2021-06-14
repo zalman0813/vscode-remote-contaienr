@@ -1,0 +1,81 @@
+{
+  "load-balancer:account=290984360226:loadBalancerArn=arn$:aws:elasticloadbalancing:us-east-2:290984360226:loadbalancer/app/dev-q-exter-N6JGCKIOFHLD/19fd124e8058a2a8:loadBalancerType=application:region=us-east-2": {
+    "loadBalancerArn": "arn:aws:elasticloadbalancing:us-east-2:290984360226:loadbalancer/app/dev-q-exter-N6JGCKIOFHLD/19fd124e8058a2a8",
+    "loadBalancerCanonicalHostedZoneId": "Z3AADJGX6KTTL2",
+    "loadBalancerDnsName": "dev-q-exter-N6JGCKIOFHLD-1580448466.us-east-2.elb.amazonaws.com",
+    "vpcId": "vpc-0353b70fd91e434cc",
+    "securityGroupIds": [
+      "sg-030a8c7879319a5e0"
+    ],
+    "ipAddressType": "ipv4"
+  },
+  "vpc-provider:account=290984360226:filter.vpc-id=vpc-0353b70fd91e434cc:region=us-east-2:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-0353b70fd91e434cc",
+    "vpcCidrBlock": "10.0.0.0/16",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Private",
+        "type": "Private",
+        "subnets": [
+          {
+            "subnetId": "subnet-0c6fecd8caf9006a3",
+            "cidr": "10.0.2.0/24",
+            "availabilityZone": "us-east-2a",
+            "routeTableId": "rtb-014bb4ddf5035f142"
+          },
+          {
+            "subnetId": "subnet-03277b2f837ed68b2",
+            "cidr": "10.0.3.0/24",
+            "availabilityZone": "us-east-2b",
+            "routeTableId": "rtb-035927eb531d6c94f"
+          }
+        ]
+      },
+      {
+        "name": "Isolate",
+        "type": "Isolated",
+        "subnets": [
+          {
+            "subnetId": "subnet-096b677663d634013",
+            "cidr": "10.0.4.0/24",
+            "availabilityZone": "us-east-2a",
+            "routeTableId": "rtb-01854bbacbc40ab5a"
+          },
+          {
+            "subnetId": "subnet-04579a85fbc9f5b3e",
+            "cidr": "10.0.5.0/24",
+            "availabilityZone": "us-east-2b",
+            "routeTableId": "rtb-0780dc94bf1c93f81"
+          }
+        ]
+      },
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0fe7b74f6c847df48",
+            "cidr": "10.0.0.0/24",
+            "availabilityZone": "us-east-2a",
+            "routeTableId": "rtb-0abe6ee0e9fc64548"
+          },
+          {
+            "subnetId": "subnet-07802996991601580",
+            "cidr": "10.0.1.0/24",
+            "availabilityZone": "us-east-2b",
+            "routeTableId": "rtb-03e7612960fb554ff"
+          }
+        ]
+      }
+    ]
+  },
+  "security-group:account=290984360226:region=us-east-2:securityGroupId=sg-030a8c7879319a5e0": {
+    "securityGroupId": "sg-030a8c7879319a5e0",
+    "allowAllOutbound": false
+  },
+  "hosted-zone:account=290984360226:domainName=focuspointdev.com:region=us-east-2": {
+    "Id": "/hostedzone/Z013132015HUSDSR09MK1",
+    "Name": "focuspointdev.com."
+  }
+}
